@@ -1,0 +1,29 @@
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ffffff33;
+  z-index: 1;
+}
+
+.header__content {
+  margin: 0 104px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header__title {
+  font-family: "roboto-slab";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  color: white;
+}

@@ -1,0 +1,59 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+.footer__copywright {
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  color: #b6bcbf;
+}
+
+.footer__links-container {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__home-btn {
+  border: none;
+  background-color: white;
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.333;
+}
+
+.footer__tripleten-btn {
+  border: none;
+  background-color: white;
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.333;
+}
+
+.footer__github-btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/github-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: white;
+}
+
+.footer__facebook-btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/iconmonstr-facebook-6.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: white;
+}

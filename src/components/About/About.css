@@ -1,0 +1,38 @@
+.about {
+  height: 624px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__image {
+  height: 464px;
+  width: 464px;
+  border-radius: 1000px;
+  border: none;
+  margin: 0 56px 0 0;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+}
+
+.about__author {
+  font-family: "roboto-slab";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 131px 0 0 0;
+}
+
+.about__description {
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  max-width: 600px;
+  margin: 24px 0 0 0;
+}

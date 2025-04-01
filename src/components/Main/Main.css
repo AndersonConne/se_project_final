@@ -59,6 +59,9 @@
   line-height: 1.15;
   background-color: #f5f6f7;
   padding: 80px 0 0 104px;
+  display: flex;
+  flex-direction: column;
+  height: 974px;
 }
 
 .news-card__list {
@@ -76,4 +79,18 @@
   font-size: 40px;
   line-height: 1.15;
   margin: 0 0 64px 0;
+}
+
+.news__more-btn {
+  width: 288px;
+  height: 64px;
+  border: none;
+  background-color: #e8e8e8;
+  border-radius: 80px;
+  align-self: center;
+  margin: 56px 0 0 0;
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.333;
 }

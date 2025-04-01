@@ -58,3 +58,16 @@
   align-self: center;
   filter: brightness(0) invert(1);
 }
+
+.nav__signin-btn {
+  width: 176px;
+  height: 48px;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  background-color: transparent;
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  color: white;
+}

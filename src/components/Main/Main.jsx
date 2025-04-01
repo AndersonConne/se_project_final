@@ -21,6 +21,7 @@ function Main() {
             <NewsCard key={item.title} {...item} />
           ))}
         </ul>
+        <button className="news__more-btn">Show more</button>
       </section>
     </main>
   );

@@ -4,7 +4,8 @@ import Main from "../Main/Main";
 import About from "../About/About";
 import Footer from "../Footer/Footer";
 import { useState } from "react";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import LoginModal from "../LoginModal/LoginModal";
+
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,23 +14,36 @@ function App() {
     setActiveModal("sign-in");
   };
 
-  const handleSignout = () => {
+  const handleSignout = (e) => {
+    // Update later
+    e.preventDefault();
     setIsLoggedIn(false);
   };
 
-  const handleSignin = () => {
+  const handleSignin = (e) => {
+    // Update Later
+    e.preventDefault();
     setIsLoggedIn(true);
+    setActiveModal("");
   };
 
   return (
     <div className="page">
       <div className="page__content">
-        <Header isLoggedIn={isLoggedIn} handleSigninClick={handleSigninClick} />
+        <Header
+          isLoggedIn={isLoggedIn}
+          handleSigninClick={handleSigninClick}
+          onLogout={handleSignout}
+        />
         <Main />
         <About />
         <Footer />
       </div>
-      <ModalWithForm activeModal={activeModal} />
+      <LoginModal
+        activeModal={activeModal}
+        isOpen={"sign-in"}
+        onSubmit={handleSignin}
+      />
     </div>
   );
 }

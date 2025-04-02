@@ -1,6 +1,6 @@
 import Navigation from "../Navigation/Navigation";
 import "./Header.css";
-function Header({ isLoggedIn, handleSigninClick }) {
+function Header({ isLoggedIn, handleSigninClick, onLogout }) {
   return (
     <header className="header">
       <div className="header__content">
@@ -8,6 +8,7 @@ function Header({ isLoggedIn, handleSigninClick }) {
         <Navigation
           isLoggedIn={isLoggedIn}
           handleSigninClick={handleSigninClick}
+          onLogout={onLogout}
         />
       </div>
     </header>

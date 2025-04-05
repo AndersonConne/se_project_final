@@ -1,22 +1,37 @@
 .header {
-  position: absolute;
   width: 100%;
-  top: 0;
-  left: 0;
   height: 80px;
   display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
   align-items: center;
+  justify-content: center; /* Add this */
   border-bottom: 1px solid #ffffff33;
-  z-index: 1;
+  background-color: transparent;
+  z-index: 1000;
+  box-sizing: border-box; /* Add this */
+}
+
+.header_type_dark {
+  border-bottom: 1px solid #d1d2d6;
+}
+
+.header_type_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 .header__content {
+  max-width: 1280px;
+  width: calc(100% - 208px);
   margin: 0 104px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .header__title {
@@ -26,4 +41,8 @@
   line-height: 1.2;
   letter-spacing: 0px;
   color: white;
+}
+
+.header__title_type_dark {
+  color: black;
 }

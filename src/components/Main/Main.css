@@ -53,24 +53,10 @@
 }
 
 .news {
-  font-family: "roboto-slab";
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 1.15;
   background-color: #f5f6f7;
   padding: 80px 0 0 104px;
   display: flex;
   flex-direction: column;
-  height: 974px;
-}
-
-.news-card__list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  gap: 16px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .news__results {
@@ -88,7 +74,7 @@
   background-color: #e8e8e8;
   border-radius: 80px;
   align-self: center;
-  margin: 56px 0 0 0;
+  margin: 56px 0 80px 0;
   font-family: "roboto";
   font-weight: 500;
   font-size: 18px;

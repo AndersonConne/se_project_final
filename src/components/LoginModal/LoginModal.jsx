@@ -1,6 +1,12 @@
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
-function LoginModal({ activeModal, isOpen, onSubmit }) {
+function LoginModal({
+  activeModal,
+  isOpen,
+  onSubmit,
+  onClose,
+  onRedirectButtonClick,
+}) {
   return (
     <ModalWithForm
       activeModal={activeModal}
@@ -9,6 +15,8 @@ function LoginModal({ activeModal, isOpen, onSubmit }) {
       buttonText={"Sign In"}
       redirectButtonText={{ prefix: "or ", action: "Sign Up" }}
       onSubmit={onSubmit}
+      onClose={onClose}
+      onRedirectButtonClick={onRedirectButtonClick}
     >
       <label className="modal__label">
         Email

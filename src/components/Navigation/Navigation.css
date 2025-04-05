@@ -17,6 +17,10 @@
   color: white;
 }
 
+.nav__home-btn_type_dark {
+  color: black;
+}
+
 .nav__saved-btn {
   background: transparent;
   border: none;
@@ -28,6 +32,10 @@
   line-height: 1.33;
   margin: 0 64px 0;
   color: rgba(182, 188, 191, 1);
+}
+
+.nav__saved-btn_type_dark {
+  color: black;
 }
 
 .nav__logout-btn {
@@ -45,6 +53,10 @@
   border-radius: 100px;
 }
 
+.nav__logout-btn_type_dark {
+  border: 1px solid black;
+}
+
 .nav__user {
   margin: 0;
   font-family: "roboto";
@@ -54,9 +66,17 @@
   color: white;
 }
 
+.nav__user_type_dark {
+  color: black;
+}
+
 .nav__logout {
   align-self: center;
   filter: brightness(0) invert(1);
+}
+
+.nav__logout_type_dark {
+  filter: none;
 }
 
 .nav__signin-btn {
@@ -70,4 +90,23 @@
   font-size: 18px;
   line-height: 1.33;
   color: white;
+}
+
+.nav__home-btn,
+.nav__saved-btn {
+  position: relative;
+}
+
+/* Style for the indicator line */
+.nav__indicator {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.nav__home-btn_type_dark .nav__indicator,
+.nav__saved-btn_type_dark .nav__indicator {
+  background-color: #1a1b22;
 }

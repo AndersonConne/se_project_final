@@ -1,11 +1,6 @@
 // Fonts
 
 @font-face {
-  font-family: "inter";
-  src: url("./vendor/final-project_fonts_latin/inter-400-regular.woff");
-}
-
-@font-face {
   font-family: "roboto";
   src: url("./vendor/final-project_fonts_latin/roboto-400-regular.woff");
 }
@@ -13,4 +8,9 @@
 @font-face {
   font-family: "roboto-slab";
   src: url("./vendor/final-project_fonts_latin/roboto-slab-400-regular.woff");
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("./vendor/final-project_fonts_latin/inter-400-regular.woff");
 }

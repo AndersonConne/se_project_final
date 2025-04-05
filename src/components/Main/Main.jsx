@@ -3,6 +3,7 @@ import SearchForm from "../SearchForm/SearchForm";
 import Preloader from "../Preloader/Preloader";
 import { mockNewsData } from "../../utils/mockData";
 import NewsCard from "../NewsCard/NewsCard";
+import NewsCardList from "../NewsCardList/NewsCardList";
 function Main() {
   return (
     <main className="main">
@@ -16,11 +17,7 @@ function Main() {
       </section>
       <section className="news">
         <h2 className="news__results">Search results</h2>
-        <ul className="news-card__list">
-          {mockNewsData.map((item) => (
-            <NewsCard key={item.title} {...item} />
-          ))}
-        </ul>
+        <NewsCardList articles={mockNewsData} />
         <button className="news__more-btn">Show more</button>
       </section>
     </main>

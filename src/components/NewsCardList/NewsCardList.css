@@ -1,0 +1,10 @@
+.news-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 16px; /* Add this to create space between cards */
+  flex-wrap: wrap; /* Add this to allow cards to wrap to next line if needed */
+  width: 100%;
+}

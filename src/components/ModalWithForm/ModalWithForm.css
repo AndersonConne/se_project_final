@@ -97,6 +97,14 @@
   align-self: center;
   background-color: #2f71e5;
   color: white;
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.modal__submit:hover {
+  cursor: pointer;
 }
 
 .modal__redirect-btn {
@@ -107,8 +115,14 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .modal__redirect-btn_blue {
   color: #2f71e5;
+}
+
+.modal__redirect-btn_blue:hover {
+  cursor: pointer;
 }

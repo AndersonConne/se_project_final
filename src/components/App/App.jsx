@@ -32,6 +32,8 @@ function App() {
   const handleSignout = (e) => {
     // Update later
     e.preventDefault();
+    Navigate("/");
+    setCurrentPage("home");
     setIsLoggedIn(false);
   };
 
@@ -51,6 +53,21 @@ function App() {
     Navigate("/");
     setCurrentPage("home");
   };
+
+  useEffect(() => {
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        closeActiveModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleEscClose);
+
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [closeActiveModal]);
+
   return (
     <div className="page">
       <div className="page__content">

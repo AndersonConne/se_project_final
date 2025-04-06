@@ -8,3 +8,8 @@
   flex-wrap: wrap; /* Add this to allow cards to wrap to next line if needed */
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .news-card__list {
+    gap: 8px;
+  }
+}

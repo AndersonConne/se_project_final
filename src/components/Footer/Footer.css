@@ -1,9 +1,10 @@
 .footer {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
   margin: 0 104px;
+  gap: 0;
 }
 
 .footer__copywright {
@@ -12,6 +13,7 @@
   font-size: 16px;
   line-height: 1.375;
   color: #b6bcbf;
+  margin: 0;
 }
 
 .footer__links-container {
@@ -26,6 +28,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.333;
+  padding: 0;
 }
 
 .footer__tripleten-btn {
@@ -35,6 +38,12 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 1.333;
+  padding: 0;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 24px;
 }
 
 .footer__github-btn {
@@ -57,4 +66,11 @@
   background-size: contain;
   border: none;
   background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin: 0 20px 0 40px;
+    height: 64px;
+  }
 }

@@ -46,3 +46,15 @@
 .header__title_type_dark {
   color: black;
 }
+
+@media screen and (max-width: 768px) {
+  .header {
+    justify-content: space-around;
+    height: 66px;
+  }
+
+  .header__content {
+    margin: 0 40px;
+    width: 100%;
+  }
+}

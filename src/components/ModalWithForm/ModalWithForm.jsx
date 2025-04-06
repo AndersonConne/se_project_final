@@ -1,5 +1,6 @@
 import "./ModalWithForm.css";
 import close from "../../images/x.svg";
+import { useRef } from "react";
 function ModalWithForm({
   children,
   title,
@@ -11,9 +12,22 @@ function ModalWithForm({
   onClose,
   onRedirectButtonClick,
 }) {
+  const modalContentRef = useRef(null);
+
+  const handleOverlayClick = (e) => {
+    if (
+      modalContentRef.current &&
+      !modalContentRef.current.contains(e.target)
+    ) {
+      onClose();
+    }
+  };
   return (
-    <div className={`modal ${activeModal === isOpen && "modal_open"} `}>
-      <div className="modal__content">
+    <div
+      className={`modal ${activeModal === isOpen && "modal_open"} `}
+      onClick={handleOverlayClick}
+    >
+      <div className="modal__content" ref={modalContentRef}>
         <h2 className="modal__title">{title}</h2>
         <button className="modal__dismiss" onClick={onClose} type="button">
           <img className="modal__dismiss-img" src={close} alt={close}></img>

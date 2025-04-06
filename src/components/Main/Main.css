@@ -80,3 +80,40 @@
   font-size: 18px;
   line-height: 1.333;
 }
+
+@media screen and (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+    justify-content: start;
+    height: 400px;
+  }
+  .hero::before {
+    height: 400px;
+  }
+  .hero__title {
+    font-size: 36px;
+    line-height: 1.11;
+    margin: 104px 0 0 160px;
+    max-width: 385px;
+  }
+  .hero__description {
+    margin: 16px 0 0 160px;
+    max-width: 452px;
+  }
+
+  .news {
+    padding: 40px 40px;
+  }
+
+  .news__results {
+    font-size: 30px;
+    line-height: 1.133;
+  }
+
+  .news__more-btn {
+    width: 240px;
+    height: 56px;
+    margin: 32px 0 0 0;
+    background-color: #ffffff;
+  }
+}

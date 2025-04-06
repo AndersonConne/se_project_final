@@ -54,7 +54,7 @@
 }
 
 .nav__logout-btn_type_dark {
-  border: 1px solid black;
+  border: 1px solid #d1d2d6;
 }
 
 .nav__user {
@@ -73,6 +73,10 @@
 .nav__logout {
   align-self: center;
   filter: brightness(0) invert(1);
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
 }
 
 .nav__logout_type_dark {
@@ -90,6 +94,7 @@
   font-size: 18px;
   line-height: 1.33;
   color: white;
+  padding: 0;
 }
 
 .nav__home-btn,
@@ -109,4 +114,37 @@
 .nav__home-btn_type_dark .nav__indicator,
 .nav__saved-btn_type_dark .nav__indicator {
   background-color: #1a1b22;
+}
+
+@media screen and (max-width: 768px) {
+  .nav__home-btn {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .nav__signin-btn {
+    margin: 0 0 0 16px;
+    width: 152px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .nav__indicator {
+    bottom: -13px;
+  }
+
+  .nav__saved-btn {
+    margin: 0 16px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .nav__logout-btn {
+    width: 100px;
+    height: 40px;
+  }
+  .nav__user {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }

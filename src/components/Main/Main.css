@@ -117,3 +117,22 @@
     background-color: #ffffff;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .hero {
+    height: 536px;
+    width: 320px;
+  }
+  .hero::before {
+    height: 536px;
+  }
+  .hero__title {
+    margin: 86px 16px 0 19px;
+  }
+  .hero__description {
+    margin: 16px;
+  }
+  .news {
+    padding: 32px 16px 16px 16px;
+  }
+}

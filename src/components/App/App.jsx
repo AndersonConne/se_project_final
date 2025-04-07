@@ -12,8 +12,8 @@ import SavedNews from "../SavedNews/SavedNews";
 function App() {
   const [activeModal, setActiveModal] = useState("");
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [isOverlay, setIsOverlay] = useState(false);
   const [currentPage, setCurrentPage] = useState("home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const Navigate = useNavigate();
   const location = useLocation();
 
@@ -54,6 +54,10 @@ function App() {
     setCurrentPage("home");
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   useEffect(() => {
     const handleEscClose = (e) => {
       if (e.key === "Escape") {
@@ -79,6 +83,8 @@ function App() {
           onHomeClick={homeNavigation}
           isOverlay={location.pathname === "/"}
           currentPage={currentPage}
+          onMenuClick={toggleMobileMenu}
+          isMobileMenuOpen={isMobileMenuOpen}
         />
         <Routes>
           <Route

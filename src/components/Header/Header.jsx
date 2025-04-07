@@ -9,6 +9,8 @@ function Header({
   isOverlay,
   currentPage,
   onHomeClick,
+  onMenuClick,
+  isMobileMenuOpen,
 }) {
   const location = useLocation();
   const isDarkText = location.pathname === "/saved-news";
@@ -34,6 +36,8 @@ function Header({
           isDarkText={isDarkText}
           currentPage={currentPage}
           onHomeClick={onHomeClick}
+          onMenuClick={onMenuClick}
+          isMobileMenuOpen={isMobileMenuOpen}
         />
       </div>
     </header>

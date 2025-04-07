@@ -57,3 +57,23 @@
     margin: 16px 0 0 0;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .about {
+    height: 752px;
+    flex-direction: column;
+    justify-content: start;
+    margin-top: 32px;
+  }
+  .about__image {
+    margin: 0;
+    width: 272px;
+    height: 272px;
+  }
+  .about__author {
+    margin: 24px 16px 16px;
+  }
+  .about__description {
+    margin: 0 16px;
+  }
+}

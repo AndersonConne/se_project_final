@@ -58,3 +58,17 @@
     width: 100%;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .header {
+    height: 56px;
+  }
+
+  .header__content {
+    margin: 0 16px;
+  }
+  .header__title {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

@@ -47,7 +47,6 @@ export async function getSavedArticles() {
 }
 
 export async function saveArticle(articleData) {
-  console.log("api.js - Received article data:", articleData);
   try {
     const currentSavedArticles = await getSavedArticles();
 

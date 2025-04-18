@@ -1,10 +1,7 @@
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import "./App.css";
-import {
-  SearchContextProvider,
-  SearchContext,
-} from "../../Context/SearchContext";
+import { SearchContextProvider } from "../../Context/SearchContext";
 import { CurrentUserContext } from "../../Context/CurrentUserContext";
 import Header from "../Header/Header";
 import Main from "../Main/Main";
@@ -53,7 +50,7 @@ function App() {
     e.preventDefault();
     localStorage.removeItem("currentUser");
     localStorage.removeItem("isLoggedIn");
-    localStorage.removeItem("username"); // Add this line
+    localStorage.removeItem("username");
     setCurrentUser("");
     setIsLoggedIn(false);
     navigate("/");
@@ -69,8 +66,6 @@ function App() {
           setCurrentUser(res.user.name);
           setIsLoggedIn(true);
           closeActiveModal();
-        } else {
-          console.log("Invalid response:", res);
         }
       })
       .catch((err) => {
@@ -119,7 +114,6 @@ function App() {
     setError(null);
     getNewsArticles(values)
       .then((data) => {
-        console.log("API Response Data: ", data);
         setSearchResults(data.articles);
         setIsLoading(false);
         setIsSearched(true);

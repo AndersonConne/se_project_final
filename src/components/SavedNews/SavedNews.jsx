@@ -9,7 +9,6 @@ function SavedNews({
   isLoggedIn,
   currentSearchKeyword,
 }) {
-  console.log(savedArticles);
   const currentUser = useContext(CurrentUserContext);
   const savedKeywords = savedArticles.map((article) => article.keyword);
   if (currentSearchKeyword && !savedKeywords.includes(currentSearchKeyword)) {

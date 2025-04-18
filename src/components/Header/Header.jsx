@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import "./Header.css";
 function Header({
@@ -22,14 +22,14 @@ function Header({
       }`}
     >
       <div className="header__content">
-        <a
-          href="/"
+        <Link
+          to="/"
           className={`header__title ${
             isDarkText ? "header__title_type_dark" : ""
           }`}
         >
           NewsExplorer
-        </a>
+        </Link>
         <Navigation
           isLoggedIn={isLoggedIn}
           handleSigninClick={handleSigninClick}

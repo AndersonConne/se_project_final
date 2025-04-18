@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
@@ -7,9 +8,9 @@ function Footer() {
       </p>
       <div className="footer__links-container">
         <div className="footer__home-container">
-          <a href="/" className="footer__home-btn">
+          <Link to="/" className="footer__home-btn">
             Home
-          </a>
+          </Link>
           <a
             href="https://tripleten.com"
             target="_blank"

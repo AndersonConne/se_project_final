@@ -34,6 +34,8 @@
   font-size: 18px;
   line-height: 1.333;
   padding: 0;
+  text-decoration: none;
+  color: black;
 }
 
 .footer__tripleten-btn {
@@ -44,6 +46,8 @@
   font-size: 18px;
   line-height: 1.333;
   padding: 0;
+  text-decoration: none;
+  color: black;
 }
 
 .footer__social-links {

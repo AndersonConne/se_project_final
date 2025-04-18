@@ -17,6 +17,13 @@
   outline: none;
 }
 
+.search-form__error {
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  color: #ff0000;
+}
+
 .search-form__input::placeholder {
   color: #b6bcbf;
 }

@@ -7,13 +7,32 @@ function Footer() {
       </p>
       <div className="footer__links-container">
         <div className="footer__home-container">
-          <button className="footer__home-btn">Home</button>
-          <button className="footer__tripleten-btn">TripleTen</button>
+          <a href="/" className="footer__home-btn">
+            Home
+          </a>
+          <a
+            href="https://tripleten.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__tripleten-btn"
+          >
+            TripleTen
+          </a>
         </div>
 
         <div className="footer__social-links">
-          <button className="footer__github-btn"></button>
-          <button className="footer__facebook-btn"></button>
+          <a
+            href="https://github.com/AndersonConne"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__github-btn"
+          ></a>
+          <a
+            href="https://www.facebook.com/andy.conner.399"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer__facebook-btn"
+          ></a>
         </div>
       </div>
     </footer>

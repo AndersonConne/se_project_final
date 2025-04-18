@@ -11,6 +11,7 @@ function Header({
   onHomeClick,
   onMenuClick,
   isMobileMenuOpen,
+  activeModal,
 }) {
   const location = useLocation();
   const isDarkText = location.pathname === "/saved-news";
@@ -21,13 +22,14 @@ function Header({
       }`}
     >
       <div className="header__content">
-        <p
+        <a
+          href="/"
           className={`header__title ${
             isDarkText ? "header__title_type_dark" : ""
           }`}
         >
           NewsExplorer
-        </p>
+        </a>
         <Navigation
           isLoggedIn={isLoggedIn}
           handleSigninClick={handleSigninClick}
@@ -38,6 +40,7 @@ function Header({
           onHomeClick={onHomeClick}
           onMenuClick={onMenuClick}
           isMobileMenuOpen={isMobileMenuOpen}
+          activeModal={activeModal}
         />
       </div>
     </header>

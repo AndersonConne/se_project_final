@@ -4,8 +4,8 @@
   margin: 0;
   display: flex;
   flex-direction: row;
-  gap: 16px; /* Add this to create space between cards */
-  flex-wrap: wrap; /* Add this to allow cards to wrap to next line if needed */
+  gap: 16px;
+  flex-wrap: wrap;
   width: 100%;
 }
 @media screen and (max-width: 768px) {

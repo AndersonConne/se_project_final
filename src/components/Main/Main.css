@@ -1,5 +1,5 @@
 .hero {
-  background-image: url("https://s3-alpha-sig.figma.com/img/dac0/778e/82f1206f112335e2ee4d938ba64f02d6?Expires=1743984000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=DYKgyq3yNvNNGWezrbDqOP7h0VcItxLgAOuntx2YSDEJaK2RmikMfbSG8wjgIKNfDHnA7cVDkr69Bioa9Gr56Ye4EOy~-N~28L8E7C79gZX3AceCYdbEKRLB8x9xqeMZTvm9SDfhugPRFZ~peOjh4OIYzv~FunBp5HJzRiWRJlsguvB~dkFXv-vpnYoJ7axHL1t5whoJioBWO5gTNiHIuZA4H7siQVgLi2~wUUhxFmJCO1kpDovyGuOl4VWwqJwwBqJX~L1oMW1al9YLvDH7MWsY5KMf3YruQk~IT55nGD8Pm8A10Ib5LWIAHl5CKTZPbCpuR-zAdO5QH7RnkiyjDQ__");
+  background-image: url("../../images/hero-image.svg");
   height: 576px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -8,28 +8,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 576px;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* This creates a semi-transparent black overlay */
-}
-
-.hero__title,
-.hero__description {
-  position: relative;
-  z-index: 1;
 }
 
 .hero__title {
@@ -59,6 +37,10 @@
   flex-direction: column;
 }
 
+.news_type_hidden {
+  display: none;
+}
+
 .news__results {
   font-family: "roboto-slab";
   font-weight: 400;
@@ -85,9 +67,6 @@
   .hero {
     align-items: flex-start;
     justify-content: start;
-    height: 400px;
-  }
-  .hero::before {
     height: 400px;
   }
   .hero__title {

@@ -1,8 +1,9 @@
+import { useContext } from "react";
 import logout from "../../images/logout.svg";
 import mobileMenu from "../../images/menu.svg";
-import closeIcon from "../../images/x.svg";
 import closeIconWhite from "../../images/x-white.svg";
 import "./Navigation.css";
+import { CurrentUserContext } from "../../Context/CurrentUserContext";
 function Navigation({
   isLoggedIn,
   handleSigninClick,
@@ -13,21 +14,27 @@ function Navigation({
   onHomeClick,
   onMenuClick,
   isMobileMenuOpen,
+  activeModal,
 }) {
+  const currentUser = useContext(CurrentUserContext);
+  console.log("Navigation currentUser:", currentUser);
   return (
     <nav className="nav">
-      <button
-        className={`nav__menu-btn ${
-          isDarkText ? "nav__menu-btn_type_dark" : ""
-        }`}
-        onClick={onMenuClick}
-      >
-        <img
-          src={isMobileMenuOpen ? closeIconWhite : mobileMenu}
-          alt="menu"
-          className="nav__menu-icon"
-        />
-      </button>
+      {activeModal === "" ? (
+        <button
+          className={`nav__menu-btn ${
+            isDarkText ? "nav__menu-btn_type_dark" : ""
+          }`}
+          onClick={onMenuClick}
+        >
+          <img
+            src={isMobileMenuOpen ? closeIconWhite : mobileMenu}
+            alt="menu"
+            className="nav__menu-icon"
+          />
+        </button>
+      ) : null}
+
       {isMobileMenuOpen && (
         <div
           className={`nav__overlay nav__overlay_visible ${
@@ -48,7 +55,9 @@ function Navigation({
           onClick={onHomeClick}
         >
           Home
-          {currentPage === "home" && <div className="nav__indicator" />}
+          {currentPage === "home" && !isMobileMenuOpen && (
+            <div className="nav__indicator" />
+          )}
         </button>
         {isLoggedIn ? (
           <>
@@ -59,7 +68,7 @@ function Navigation({
               onClick={onSaveArticlesClick}
             >
               Saved articles
-              {currentPage === "saved-news" && (
+              {currentPage === "saved-news" && !isMobileMenuOpen && (
                 <div className="nav__indicator" />
               )}
             </button>
@@ -74,7 +83,7 @@ function Navigation({
                   isDarkText ? "nav__user_type_dark" : ""
                 }`}
               >
-                User
+                {currentUser}
               </p>
               <img
                 src={logout}

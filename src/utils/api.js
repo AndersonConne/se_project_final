@@ -1,4 +1,8 @@
-export const BASE_URL = "https://newsapi.org/v2/everything";
+export const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://nomoreparties.co/news/v2/everything"
+    : "https://newsapi.org/v2/everything";
+
 export const API_KEY = "360d6ec59a024290b893fb87fdc855fd";
 
 function checkResponse(res) {

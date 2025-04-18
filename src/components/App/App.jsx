@@ -211,7 +211,7 @@ function App() {
             />
             <Routes>
               <Route
-                path="/se_project_final"
+                path="/"
                 element={
                   <>
                     <Main
@@ -232,7 +232,7 @@ function App() {
                 }
               ></Route>
               <Route
-                path="/se_project_final/saved-news"
+                path="/saved-news"
                 element={
                   <SavedNews
                     savedArticles={savedArticles}

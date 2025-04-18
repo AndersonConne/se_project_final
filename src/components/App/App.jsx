@@ -136,11 +136,15 @@ function App() {
   const handleRegister = (values) => {
     return register(values)
       .then((res) => {
-        console.log(res);
-        setCurrentUser(res);
-        setIsLoggedIn(true);
-        closeActiveModal();
-        navigate("/");
+        if (res && res.token) {
+          localStorage.setItem("currentUser", res.token);
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("username", res.user.name);
+          setCurrentUser(res.user.name);
+          setIsLoggedIn(true);
+          closeActiveModal();
+          navigate("/");
+        }
       })
       .catch((err) => console.error(err));
   };
@@ -207,7 +211,7 @@ function App() {
             />
             <Routes>
               <Route
-                path="/"
+                path="/se_project_final"
                 element={
                   <>
                     <Main
@@ -228,7 +232,7 @@ function App() {
                 }
               ></Route>
               <Route
-                path="/saved-news"
+                path="/se_project_final/saved-news"
                 element={
                   <SavedNews
                     savedArticles={savedArticles}

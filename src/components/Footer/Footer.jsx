@@ -6,7 +6,7 @@ function Footer() {
       <p className="footer__copywright">
         @ 2025 Anderson Alroy Conner, Powered by News API
       </p>
-      <div className="footer__links-container">
+      <ul className="footer__links-container">
         <div className="footer__home-container">
           <Link to="/" className="footer__home-btn">
             Home
@@ -35,7 +35,7 @@ function Footer() {
             className="footer__facebook-btn"
           ></a>
         </div>
-      </div>
+      </ul>
     </footer>
   );
 }

@@ -28,7 +28,7 @@
 
 .modal__title {
   margin: 34px 0 22px 0;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 900;
   font-size: 24px;
   line-height: 100%;
@@ -57,7 +57,7 @@
 
 .modal__label {
   display: block;
-  font-family: "inter";
+  font-family: "inter", sans-serif, Arial;
   font-weight: 400;
   font-size: 12px;
   line-height: 100%;
@@ -97,7 +97,7 @@
   align-self: center;
   background-color: #2f71e5;
   color: white;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
@@ -111,7 +111,7 @@
   border: none;
   background-color: white;
   margin: 16px 0 28px 0;
-  font-family: "inter";
+  font-family: "inter", sans-serif, Arial;
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
@@ -119,15 +119,15 @@
   width: 100%;
 }
 
-.modal__redirect-btn_blue {
+.modal__redirect-btn-blue {
   color: #2f71e5;
 }
 
-.modal__redirect-btn_blue:hover {
+.modal__redirect-btn-blue:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 600px) {
   .modal_open {
     align-items: flex-end;
   }

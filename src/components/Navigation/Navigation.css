@@ -44,7 +44,7 @@
   border: none;
   margin: 0;
   padding: 0;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
@@ -61,7 +61,7 @@
   border: none;
   margin: 0;
   padding: 0;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
@@ -94,7 +94,7 @@
 
 .nav__user {
   margin: 0;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
@@ -108,7 +108,7 @@
 .nav__logout {
   align-self: center;
   filter: brightness(0) invert(1);
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
@@ -124,7 +124,7 @@
   border: 1px solid #ffffff;
   border-radius: 100px;
   background-color: transparent;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
@@ -150,7 +150,7 @@
   background-color: #1a1b22;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .nav__home-btn {
     margin: 0;
     font-size: 16px;
@@ -183,7 +183,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .nav__content {
     display: none;
     position: fixed;

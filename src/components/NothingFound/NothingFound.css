@@ -9,14 +9,14 @@
 
 .nothing-found__title {
   margin: 32px 0 16px 0;
-  font-family: "roboto-slab";
+  font-family: "roboto-slab", sans-serif, Arial;
   font-weight: 400;
   font-size: 26px;
   line-height: 1.15;
 }
 
 .nothing-found__description {
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33;

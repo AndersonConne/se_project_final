@@ -16,6 +16,7 @@ import getNewsArticles, {
   saveArticle,
 } from "../../utils/api";
 import { login, register } from "../../utils/auth";
+import SuccessfulRegistration from "../SuccessfulRegistration/SuccessfulRegistration.";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -135,8 +136,8 @@ function App() {
           localStorage.setItem("isLoggedIn", "true");
           localStorage.setItem("username", res.user.name);
           setCurrentUser(res.user.name);
-          setIsLoggedIn(true);
           closeActiveModal();
+          setActiveModal("successful");
           navigate("/");
         }
       })
@@ -253,6 +254,12 @@ function App() {
             onClose={closeActiveModal}
             onRedirectButtonClick={handleSigninClick}
             handleRegister={handleRegister}
+          />
+          <SuccessfulRegistration
+            activeModal={activeModal}
+            isOpen={"successful"}
+            onClose={closeActiveModal}
+            handleSigninClick={handleSigninClick}
           />
         </div>
       </SearchContextProvider>

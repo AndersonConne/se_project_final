@@ -18,7 +18,7 @@
   left: 24px;
   background: white;
   border-radius: 8px;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 500;
@@ -51,13 +51,17 @@
 
 .news-card__image {
   width: 100%;
-  height: 272px;
   border-radius: 16px 16px 0 0;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+  min-height: 272px;
+  max-height: 272px;
 }
 
 .news-card__date {
   color: #b6bcbf;
-  font-family: "inter";
+  font-family: "inter", sans-serif, Arial;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.33;
@@ -67,7 +71,7 @@
 .news-card__title {
   font-size: 26px;
   line-height: 1.15;
-  font-family: "roboto-slab";
+  font-family: "roboto-slab", sans-serif, Arial;
   font-weight: 400;
   margin: 12px 0 16px 0;
   display: -webkit-box;
@@ -81,7 +85,7 @@
 .news-card__description {
   font-size: 16px;
   line-height: 22px;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 400;
   margin: 0;
   display: -webkit-box;
@@ -97,7 +101,7 @@
 .news-card__source {
   color: #b6bcbf;
   margin: 18px 0 24px 0;
-  font-family: "roboto-slab";
+  font-family: "roboto-slab", sans-serif, Arial;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.25;
@@ -146,7 +150,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 12px;
   line-height: 100%;
@@ -159,7 +163,7 @@
   filter: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .news-card {
     width: 224px;
     height: 420px;
@@ -169,7 +173,8 @@
     margin: 0 16px;
   }
   .news-card__image {
-    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
   }
   .news-card__date {
     margin: 16px 0 0 0;
@@ -202,10 +207,15 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .news-card {
     width: 288px;
     height: 440px;
+  }
+
+  .news-card__image {
+    min-height: 196px;
+    max-height: 196px;
   }
   .news-card__title {
     font-size: 22px;

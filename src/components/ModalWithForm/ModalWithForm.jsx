@@ -43,7 +43,7 @@ function ModalWithForm({
         <button className="modal__redirect-btn">
           {redirectButtonText.prefix}
           <span
-            className="modal__redirect-btn_blue"
+            className="modal__redirect-btn-blue"
             onClick={onRedirectButtonClick}
           >
             {redirectButtonText.action}

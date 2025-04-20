@@ -7,8 +7,10 @@
   gap: 16px;
   flex-wrap: wrap;
   width: 100%;
+  margin: 0 auto;
+  justify-content: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .news-card__list {
     gap: 8px;
   }

@@ -11,7 +11,7 @@
   border: none;
   box-sizing: border-box;
   padding-left: 24px;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-size: 16px;
   line-height: 1.375;
   outline: none;
@@ -34,7 +34,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  font-family: "roboto";
+  font-family: "roboto", sans-serif, Arial;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.33;
@@ -53,12 +53,11 @@
   background-color: #2a65cc;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .search-form {
-    margin-top: 48px;
+    margin: 48px 0;
   }
   .search-form__input {
-    margin-left: 160px;
     width: 452px;
     height: 56px;
   }
@@ -68,7 +67,7 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .search-form {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,74 @@
+.successful-registration {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.successful-registration_open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.successful-registration__content {
+  background-color: white;
+  border-radius: 8px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 430px;
+  height: 182px;
+  z-index: 10;
+}
+
+.successful-registration__title {
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 100%;
+  width: 315px;
+  margin: 43px 0 14px 36px;
+}
+
+.successful-registration__dismiss {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  top: -50px;
+  right: -40px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.successful-registration__dismiss-img {
+  filter: invert(1);
+  width: 100%;
+  height: 100%;
+}
+
+.successful-registration__btn {
+  margin: 0 0 0 36px;
+  color: #2f71e5;
+  border: none;
+  background-color: white;
+  font-family: "inter", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  padding: 0;
+}
+
+.successful-registration__btn:hover {
+  cursor: pointer;
+}

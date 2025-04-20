@@ -37,9 +37,10 @@
   margin: 24px 0 0 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .about {
     height: 354px;
+    padding: 0;
   }
   .about__image {
     width: 232px;
@@ -58,22 +59,30 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .about {
     height: 752px;
     flex-direction: column;
+    align-items: center;
     justify-content: start;
-    margin-top: 32px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .about__container {
+    align-self: center;
   }
   .about__image {
     margin: 0;
     width: 272px;
     height: 272px;
+    margin-top: 32px;
   }
   .about__author {
-    margin: 24px 16px 16px;
+    text-align: center;
   }
+
   .about__description {
-    margin: 0 16px;
+    text-align: center;
   }
 }

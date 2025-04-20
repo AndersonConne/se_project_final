@@ -119,6 +119,11 @@
   width: 100%;
 }
 
+.modal__redirect-btn_left {
+  text-align: left;
+  margin-top: 0;
+}
+
 .modal__redirect-btn-blue {
   color: #2f71e5;
 }

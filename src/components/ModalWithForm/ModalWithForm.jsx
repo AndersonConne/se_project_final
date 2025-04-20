@@ -11,6 +11,7 @@ function ModalWithForm({
   isOpen,
   onClose,
   onRedirectButtonClick,
+  noSubmitButton,
 }) {
   const modalContentRef = useRef(null);
 
@@ -34,13 +35,21 @@ function ModalWithForm({
         </button>
         <form onSubmit={onSubmit} className="modal__form">
           {children}
-          <div className="modal__button-container">
-            <button type="submit" className="modal__submit">
-              {buttonText}
-            </button>
-          </div>
+          {!noSubmitButton && (
+            <div className="modal__button-container">
+              <button type="submit" className="modal__submit">
+                {buttonText}
+              </button>
+            </div>
+          )}
         </form>
-        <button className="modal__redirect-btn">
+        <button
+          className={`modal__redirect-btn ${
+            activeModal === "successful-registration"
+              ? "modal__redirect-btn_left"
+              : ""
+          }`}
+        >
           {redirectButtonText.prefix}
           <span
             className="modal__redirect-btn-blue"

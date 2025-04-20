@@ -7,7 +7,7 @@ function Footer() {
         @ 2025 Anderson Alroy Conner, Powered by News API
       </p>
       <ul className="footer__links-container">
-        <div className="footer__home-container">
+        <li className="footer__home-container">
           <Link to="/" className="footer__home-btn">
             Home
           </Link>
@@ -19,9 +19,9 @@ function Footer() {
           >
             TripleTen
           </a>
-        </div>
+        </li>
 
-        <div className="footer__social-links">
+        <li className="footer__social-links">
           <a
             href="https://github.com/AndersonConne"
             target="_blank"
@@ -34,7 +34,7 @@ function Footer() {
             rel="noopener noreferrer"
             className="footer__facebook-btn"
           ></a>
-        </div>
+        </li>
       </ul>
     </footer>
   );

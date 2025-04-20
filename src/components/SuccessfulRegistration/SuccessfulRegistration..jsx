@@ -1,40 +1,22 @@
 import "./SuccessfulRegistration.css";
-import close from "../../images/x.svg";
+import "../ModalWithForm/ModalWithForm";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
 function SuccessfulRegistration({
   activeModal,
   isOpen,
   onClose,
-  handleSigninClick,
+  onRedirectButtonClick,
 }) {
   return (
-    <div
-      className={`successful-registration ${
-        activeModal === isOpen && "successful-registration_open"
-      }`}
-    >
-      <div className="successful-registration__content">
-        <p className="successful-registration__title">
-          Registration successfully completed!
-        </p>
-        <button
-          className="successful-registration__dismiss"
-          type="button"
-          onClick={onClose}
-        >
-          <img
-            className="successful-registration__dismiss-img"
-            src={close}
-            alt={close}
-          ></img>
-        </button>
-        <button
-          className="successful-registration__btn"
-          onClick={handleSigninClick}
-        >
-          Sign In
-        </button>
-      </div>
-    </div>
+    <ModalWithForm
+      onClose={onClose}
+      isOpen={isOpen}
+      activeModal={activeModal}
+      redirectButtonText={{ prefix: "", action: "Sign In" }}
+      title={"Registration successfully completed!"}
+      noSubmitButton={true}
+      onRedirectButtonClick={onRedirectButtonClick}
+    ></ModalWithForm>
   );
 }
 

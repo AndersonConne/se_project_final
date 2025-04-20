@@ -36,6 +36,7 @@
 .news-cards {
   background-color: #f5f6f7;
   width: 100%;
+  padding: 62px 0;
   display: flex;
   justify-content: flex-start;
   box-sizing: border-box;

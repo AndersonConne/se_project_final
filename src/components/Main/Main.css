@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  margin-top: 0; /* Negative margin to compensate for header height */
-  padding-top: 80px; /* Padding to prevent content from being hidden */
+  margin: 0;
+  padding: 80px 0 80px 0;
   background-image: url("../../images/hero-image.svg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@
   font-weight: 400;
   font-size: 60px;
   line-height: 1.06;
-  margin: 0 0 32px 0;
+  margin: 80px 0 32px 0;
 }
 
 .hero__description {
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 80px; /* Use consistent padding */
+  padding: 80px;
   max-width: 1440px;
 }
 
@@ -85,13 +85,13 @@
   }
 
   .hero__content {
-    max-width: 488px; /* Adjust max-width for tablet screens */
+    max-width: 488px;
   }
 
   .hero__title {
-    font-size: 36px; /* Reduce font size */
-    line-height: 1.11; /* Adjust line height */
-    margin: 38px 0 16px 0; /* Reduce margin */
+    font-size: 36px;
+    line-height: 1.11;
+    margin: 38px 0 16px 0;
   }
 
   .hero__description {

@@ -40,6 +40,7 @@ function App() {
   };
 
   const handleSigninClick = () => {
+    closeActiveModal();
     setActiveModal("sign-in");
   };
 
@@ -137,7 +138,7 @@ function App() {
           localStorage.setItem("username", res.user.name);
           setCurrentUser(res.user.name);
           closeActiveModal();
-          setActiveModal("successful");
+          setActiveModal("successful-registration");
           navigate("/");
         }
       })
@@ -257,9 +258,10 @@ function App() {
           />
           <SuccessfulRegistration
             activeModal={activeModal}
-            isOpen={"successful"}
+            isOpen={"successful-registration"}
             onClose={closeActiveModal}
             handleSigninClick={handleSigninClick}
+            onRedirectButtonClick={handleSigninClick}
           />
         </div>
       </SearchContextProvider>

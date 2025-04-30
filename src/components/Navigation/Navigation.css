@@ -1,0 +1,230 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.nav__overlay_visible {
+  display: block;
+}
+
+.nav__overlay {
+  display: none;
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.nav__overlay_type_dark {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav__content {
+  display: flex;
+}
+
+.nav__menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.nav__menu-btn_type_dark {
+  filter: invert(1);
+}
+
+.nav__home-btn {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0 76px 0;
+  color: white;
+}
+
+.nav__home-btn_type_dark {
+  color: black;
+}
+
+.nav__saved-btn {
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  margin: 0 64px 0;
+  color: rgba(182, 188, 191, 1);
+}
+
+.nav__saved-btn_type_dark {
+  color: black;
+}
+
+.nav__logout-btn {
+  background: transparent;
+  border: none;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  width: 112px;
+  height: 48px;
+  border: 1px solid white;
+  border-radius: 100px;
+}
+
+.nav__logout-btn_type_dark {
+  border: 1px solid #d1d2d6;
+}
+
+.nav__user {
+  margin: 0;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  color: white;
+}
+
+.nav__user_type_dark {
+  color: black;
+}
+
+.nav__logout {
+  align-self: center;
+  filter: brightness(0) invert(1);
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.nav__logout_type_dark {
+  filter: none;
+}
+
+.nav__signin-btn {
+  width: 176px;
+  height: 48px;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  background-color: transparent;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  color: white;
+  padding: 0;
+}
+
+.nav__home-btn,
+.nav__saved-btn {
+  position: relative;
+}
+
+.nav__indicator {
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+}
+.nav__home-btn_type_dark .nav__indicator,
+.nav__saved-btn_type_dark .nav__indicator {
+  background-color: #1a1b22;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav__home-btn {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .nav__signin-btn {
+    margin: 0 0 0 16px;
+    width: 152px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .nav__indicator {
+    bottom: -13px;
+  }
+
+  .nav__saved-btn {
+    margin: 0 16px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .nav__logout-btn {
+    width: 100px;
+    height: 40px;
+  }
+  .nav__user {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav__content {
+    display: none;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    padding: 16px;
+    z-index: 3;
+    background-color: #1a1b22;
+  }
+
+  .nav__content_type_dark {
+    background-color: white;
+  }
+
+  .nav__content_visible {
+    display: flex;
+  }
+
+  .nav__home-btn,
+  .nav__saved-btn {
+    margin: 0;
+  }
+  .nav__menu-btn {
+    display: block;
+  }
+  .nav__home-btn {
+    font-size: 18px;
+    line-height: 3.11;
+  }
+  .nav__saved-btn {
+    font-size: 18px;
+    line-height: 3.11;
+  }
+  .nav__signin-btn {
+    width: 288px;
+    height: 56px;
+    margin: 0;
+  }
+}

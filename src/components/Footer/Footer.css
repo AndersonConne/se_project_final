@@ -1,0 +1,123 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  margin: 0 104px;
+  gap: 0;
+}
+
+.footer__copywright {
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.375;
+  color: #b6bcbf;
+  margin: 0;
+}
+
+.footer__home-container {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__links-container {
+  display: flex;
+  gap: 40px;
+}
+
+.footer__home-btn {
+  border: none;
+  background-color: white;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.333;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+.footer__tripleten-btn {
+  border: none;
+  background-color: white;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.333;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__github-btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/github-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: white;
+}
+
+.footer__facebook-btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("../../images/iconmonstr-facebook-6.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  background-color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    margin: 0 20px 0 40px;
+    height: 64px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 16px;
+    margin: 0;
+    gap: 38px;
+  }
+
+  .footer__links-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer__copywright {
+    text-align: center;
+    order: 1;
+  }
+
+  .footer__social-links {
+    display: flex;
+    align-self: start;
+    gap: 24px;
+  }
+  .footer__home-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer__home-btn {
+    text-align: start;
+  }
+}

@@ -1,0 +1,24 @@
+.nothing-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 374px;
+  background-color: #f5f6f7;
+}
+
+.nothing-found__title {
+  margin: 32px 0 16px 0;
+  font-family: "roboto-slab", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.15;
+}
+
+.nothing-found__description {
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  color: #b6bcbf;
+}

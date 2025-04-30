@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  margin: 0;
+  padding: 80px 0 80px 0;
+  background-image: url("../../images/hero-image.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hero__content {
+  max-width: 608px;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+}
+
+.hero__title {
+  color: white;
+  font-family: "roboto-slab", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 1.06;
+  margin: 80px 0 32px 0;
+}
+
+.hero__description {
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  color: white;
+  margin: 0 0 32px 0;
+}
+
+.news {
+  background-color: #f5f6f7;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 80px;
+  max-width: 1440px;
+}
+
+.news_type_hidden {
+  display: none;
+}
+
+.news__results {
+  font-family: "roboto-slab", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1.15;
+  margin: 0 0 64px 0;
+}
+
+.news__more-btn {
+  width: 288px;
+  height: 64px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 80px;
+  align-self: center;
+  margin: 56px 0 80px 0;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.333;
+}
+
+.news__more-btn:hover {
+  cursor: pointer;
+  background-color: #e8e8e8;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero {
+    min-height: 320px;
+    align-items: start;
+  }
+
+  .hero__content {
+    max-width: 488px;
+  }
+
+  .hero__title {
+    font-size: 36px;
+    line-height: 1.11;
+    margin: 38px 0 16px 0;
+  }
+
+  .hero__description {
+    font-size: 18px;
+    margin: 0 0 48px 0;
+  }
+
+  .news {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hero {
+    height: 536px;
+    padding: 0;
+  }
+
+  .hero__content {
+    padding: 0;
+    width: 100%;
+  }
+  .hero::before {
+    height: 536px;
+  }
+  .hero__title {
+    margin: 86px 16px 0 19px;
+  }
+  .hero__description {
+    margin: 16px;
+  }
+  .news {
+    padding: 16px;
+  }
+}

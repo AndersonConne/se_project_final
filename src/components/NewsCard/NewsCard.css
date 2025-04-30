@@ -1,0 +1,231 @@
+.news-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  width: 400px;
+  height: 576px;
+}
+
+.news-card__keyword {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 24px;
+  left: 24px;
+  background: white;
+  border-radius: 8px;
+  font-family: "roboto", sans-serif, Arial;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 500;
+  width: 87px;
+  height: 40px;
+}
+
+.news-card__link {
+  text-decoration: none;
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.news-card__main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.news-card__image {
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  object-fit: cover;
+  display: block;
+  object-position: center;
+  min-height: 272px;
+  max-height: 272px;
+}
+
+.news-card__date {
+  color: #b6bcbf;
+  font-family: "inter", sans-serif, Arial;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 0;
+}
+
+.news-card__title {
+  font-size: 26px;
+  line-height: 1.15;
+  font-family: "roboto-slab", sans-serif, Arial;
+  font-weight: 400;
+  margin: 12px 0 16px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.news-card__description {
+  font-size: 16px;
+  line-height: 22px;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 400;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  position: relative;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.news-card__source {
+  color: #b6bcbf;
+  margin: 18px 0 24px 0;
+  font-family: "roboto-slab", sans-serif, Arial;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.4px;
+  align-self: baseline;
+  margin-top: auto;
+}
+
+.news-card__save-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.news-card__save-btn[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  right: calc(100% - 5px);
+  transform: translateY(-50%);
+  padding: 11px 20px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  margin-right: 8px;
+  z-index: 1000;
+  transition: opacity 0.2s;
+  opacity: 1;
+  box-sizing: border-box;
+  height: 40px;
+  width: 159px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "roboto", sans-serif, Arial;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+}
+.news-card__save-btn:hover .news-card__save-img {
+  filter: invert(1);
+}
+
+.news-card__save-btn_saved:hover .news-card__save-img {
+  filter: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .news-card {
+    width: 224px;
+    height: 420px;
+  }
+
+  .news-card__content {
+    margin: 0 16px;
+  }
+  .news-card__image {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .news-card__date {
+    margin: 16px 0 0 0;
+  }
+  .news-card__title {
+    font-size: 22px;
+    line-height: 1.09;
+    margin: 16px 0 0 0;
+  }
+
+  .news-card__description {
+    margin: 10px 0 0 0;
+  }
+
+  .news-card__source {
+    margin: 12px 0 16px 0;
+  }
+  .news-card__save-btn {
+    top: 8px;
+    right: 8px;
+  }
+
+  .news-card__save-btn[data-tooltip]:hover::after {
+    display: none;
+  }
+
+  .news-card__keyword {
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .news-card {
+    width: 288px;
+    height: 440px;
+  }
+
+  .news-card__image {
+    min-height: 196px;
+    max-height: 196px;
+  }
+  .news-card__title {
+    font-size: 22px;
+    line-height: 1.09;
+    margin-top: 10px;
+  }
+  .news-card__description {
+    margin-top: 14px;
+  }
+  .news-card__source {
+    margin-bottom: 16px;
+  }
+}
